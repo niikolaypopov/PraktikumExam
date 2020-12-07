@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="main.css">
+    <!-- JS Import -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <div class="form-group">
+                    <label for="year" class="text-secondary">Year</label>
+                    <select name="year" class="input form-control" id="year" value="">
+                        <option value="" selected disabled>Select year...</option>
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                        <option value="2018">2018</option>
+                        <option value="2016">2017</option>
+                        <option value="2015">2016</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="form-group">
+                    <label for="sort-by">Sort By</label>
+                    <select name="sort-by" class="input form-control" id="sort-by" value="">
+                        <option value="" selected disabled>Sort by...</option>
+                        <option value="release_date.asc">Date (Ascending)</option>
+                        <option value="release_date.desc">Date (Descending)</option>
+                        <option value="title.asc">Title (Ascending)</option>
+                        <option value="title.desc">Title (Descending)</option>
+                        <option value="vote_average.asc">Rating (Ascending)</option>
+                        <option value="vote_average.desc">Rating (Descending)</option>
+                        <option value="vote_count.asc">Votes Number (Asending)</option>
+                        <option value="vote_count.desc">Votes Number (Desceding)</option>
+                    </select>
+                </div>
+            </div>
+            <!-- Ganre list (dynamic from JS) -->
+            <div id="checkboxes" class="col-12 col-md-4 bg-white custom-control custom-checkboxes"></div>
+        </div>
+
+
+        <br><br>
+
+        <!-- Movie Results - AJAX -->
+        <div id="result"></div>
+
+        <!-- Pages -->
+        <div class="row mt-3 d-flex justify-content-center">
+            <div class="col-6 col-md-2">
+                <div class="form-group text-center">
+                    <select name="page" class="input form-control" id="page" value="1">
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

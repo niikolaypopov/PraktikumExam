@@ -1,0 +1,12 @@
+body {
+    background-color: #dfdfdf;
+}
+
+.movieSection {
+    background-color: #fff;
+    height: 345px;
+}
+
+.movieSection div img {
+    height: 345px;
+}
